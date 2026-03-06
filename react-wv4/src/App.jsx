@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import Title from '../../react-wv4/components/Title'
+import Title from './components/Title'
 import './App.css'
-import Info from '../../react-wv4/components/Info'
-import Modal from '../../react-wv4/components/modal'
+import Info from './components/Info'
+import Modal from './components/modal'
 
 function App() {
   const [name, setname] = useState('Habibullo')
