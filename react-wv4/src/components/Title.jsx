@@ -1,11 +1,13 @@
+ import './Title.css'
+ 
  const Title=({hab,task})=>{
     
         return (
-      <>
-      <h1 className="nma">{hab}</h1>
+      <div className='title-block'>
+      <h1 className="title">{hab}</h1>
       
-    <p className="gotten">{task}</p>
-      </>
+    <p className="subtitle">{task}</p>
+      </div>
     )
  }
  export default Title

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Title from './components/Title'
 import './App.css'
 import Info from './components/Info'
+import EventList from './components/EventList'
 import Modal from './components/modal'
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
     { id: 3, name: "Ferarri", Year: 2014 }
   ])
 
+
   const [show, showContent] = useState(true)
 const task='All even are here'
 const [showMOdal,setShowModal]=useState(true)
@@ -80,16 +82,8 @@ const closeBtn=()=>{
 
       <button onClick={prev}>Previous</button>
 
-      {show && cars.map((car) => {
-        return (
-          <div key={car.id}>
-            <h1>{car.name}</h1>
-            <h3>{car.Year}</h3>
-            <button onClick={() => handleDelete(car.id)}>Delete</button>
-          </div>
-        )
-      })}
-    { showMOdal &&<Modal closeBtn={closeBtn} >
+      {show &&<EventList cars={cars} handleDelete={handleDelete} />}
+    { showMOdal &&<Modal closeBtn={closeBtn} isModeModal={true}>
   <h1>Habibullo is Professional full-stacker👑</h1>
   <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad veritatis facilis iusto, necessitatibus, eaque cumque distinctio rerum asperiores dolorum quisquam illo similique. Obcaecati quo asperiores pariatur sint. Quibusdam, asperiores. Dignissimos.</p>
  <a href="">Subscribe</a><br />

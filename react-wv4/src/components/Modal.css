@@ -13,3 +13,8 @@
   background: #fff;
   border-radius: 10px;
 }
+.modal .Moda-btn{
+    background-color: cornflowerblue;
+    padding: 8px 12px;
+    margin-top: 20px;
+}

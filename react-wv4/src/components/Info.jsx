@@ -1,4 +1,4 @@
- 
+
 
 const Info=({inc,sub})=>{
    const storage=[inc,sub]
